@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="container">
+        <img src="assets/logo.png" alt="Who Wants to Be a Millionaire Logo" class="logo"> 
+
+        <div class="question-container">
+            <div class="question" id="question">What is Generative AI?</div>
+            <ul class="options" id="options">
+                <li onclick="checkAnswer(this, true)">A. A type of AI that generates new content</li>
+                <li onclick="checkAnswer(this, false)">B. A type of AI that only analyzes data</li>
+                <li onclick="checkAnswer(this, false)">C. A type of AI that cannot learn</li>
+                <li onclick="checkAnswer(this, false)">D. A type of AI that only plays games</li>
+            </ul>
+        </div>
+
+        <div class="lifelines">
+            <button class="lifeline" onclick="useFiftyFifty()">50:50</button>
+        </div>
+
+        <div class="score">Current Score: $0</div>
+
+        <div class="results" id="results" style="display: none;">
+            <h2>Final Results</h2>
+            <p id="final-score"></p>
+            <button class="quiz-button" onclick="restartQuiz()">Restart Quiz</button>
+        </div>
+
+        <button class="back-button" onclick="goBack()">Back to Applications Page</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #b3e5fc);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    overflow-y: scroll; 
+}
+
+.slide {
+    width: 900px; 
+    height: auto; 
+    margin: 40px 0; 
+    animation: slideIn 1s ease-out; 
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden; 
+    animation: fadeIn 1s ease-out; 
+}
+
+h1 {
+    color: #1976d2;
+    font-size: 2.5em; 
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out, colorChange 5s infinite alternate;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-out;
+}
+
+.drag-drop-game {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.terms, .definitions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 45%;
+}
+
+.term, .definition {
+    padding: 10px;
+    background-color: #1976d2;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.term {
+    background-color: #0d47a1;
+}
+
+.definition {
+    background-color: #1976d2;
+}
+
+.term:hover, .definition:hover {
+    transform: scale(1.05); 
+}
+
+.flowchart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    height: 200px; 
+}
+
+.node {
+    width: 180px;
+    height: 130px; 
+    background-color: #1976d2;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    margin: 0 10px;
+}
+
+.node .front, .node .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.node .back {
+    background-color: #0d47a1;
+    transform: rotateY(180deg);
+}
+
+.node.flipped {
+    transform: rotateY(180deg);
+}
+
+.arrow {
+    font-size: 1.8em; 
+    color: #1976d2;
+    animation: bounce 2s infinite; 
+}
+
+.applications-list, .ethical-list {
+    text-align: left;
+    margin: 20px auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+.applications-list li, .ethical-list li {
+    background-color: #e3f2fd;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+.image-container, .video-container {
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.image-container img, .video-container video, .video-container iframe {
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.next-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.next-button:hover {
+    transform: scale(1.1);
+    background-color: #1565c0;
+    box-shadow: 0 0 10px #1976d2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #1976d2;
+    }
+    100% {
+        color: #0d47a1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}

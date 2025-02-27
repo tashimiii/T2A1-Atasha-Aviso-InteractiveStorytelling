@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Applications</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="activity.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Applications</h1>
+        <div class="tasks">
+            <div class="task">
+                <h2>Text Generation</h2>
+                <p>Creating human-like text for chatbots, content creation, and more.</p>
+                <div class="content">
+                    <strong>Prompt:</strong> Can you generate a fake email from Hello Kitty to Ferrari telling them she wants to ride a car?<br><br>
+                    <strong>Generated Text from ChatGPT:</strong><br>
+                    Dream Ride with Ferrari!</em><br><br>
+                    Dear Ferrari Team,<br><br>
+                    Hello! This is Hello Kitty, and I hope this email finds you well! I’m a big fan of your beautiful cars, and I’ve always admired their sleek design and speed.<br><br>
+                    I was wondering if you could make one of my biggest dreams come true — I would love the opportunity to take a ride in one of your fabulous Ferraris! I believe the joy of driving such a magnificent car would be an unforgettable experience, and it would truly make my day (maybe even my whole year!).<br><br>
+                    If it's possible, I’d be absolutely thrilled to hop in and enjoy the ride. Please let me know if this could be arranged — I’d be forever grateful!<br><br>
+                    Looking forward to hearing from you and hopefully cruising in a Ferrari soon!<br><br>
+                    Warmest wishes,<br>
+                    Hello Kitty<br>
+                    ✨🐾
+                </div>
+            </div>
+            <div class="task">
+                <h2>Image Creation</h2>
+                <p>Generating realistic images for design, marketing, and entertainment.</p>
+                <div class="content">
+                    <img src="assets/hellokitty.jpg" alt="Hello Kitty" class="resized-image">
+                    <div class="caption">
+                        <strong>Prompt:</strong> Hello Kitty on a Ferrari.<br>
+                        <strong>Source:</strong> <a href="https://leonardo.ai" target="_blank">Leonardo.ai</a>
+                    </div>
+                </div>
+            </div>
+            <div class="task">
+                <h2>Music Composition</h2>
+                <p>Composing music using AI algorithms.</p>
+                <div class="content">
+                    <audio controls>
+                        <source src="assets/Theme Song.mp3" type="audio/mp3">
+                    </audio>
+                    <div class="caption">
+                        <strong>Prompt:</strong> A theme song for Hello Kitty riding a Ferrari.<br>
+                        <strong>Source:</strong> <a href="https://suno.com" target="_blank">suno.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="task">
+                <h2>Video Generation</h2>
+                <p>Producing videos based on text descriptions or other inputs.</p>
+                <div class="content">
+                    <video controls class="resized-video">
+                        <source src="assets/Hello Kitty.mp4" type="video/mp4">
+                    </video>
+                    <div class="caption">
+                        <strong>Prompt:</strong> Hello Kitty on a Ferrari.<br>
+                        <strong>Source:</strong> <a href="https://veed.io" target="_blank">veed.io</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quiz-container">
+            <p>Think you know enough about AI? Be a millionaire now!</p>
+            <button class="quiz-button" onclick="window.location.href='quiz.html'">Take Quiz</button>
+        </div>
+        <button class="back-button" onclick="goBack()">Back to Learning Page</button>
+    </div>
+    <script src="activity.js"></script>
+</body>
+</html>

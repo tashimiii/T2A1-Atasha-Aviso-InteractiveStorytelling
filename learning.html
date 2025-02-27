@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="learning.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f0f0;
+        }
+        #container {
+            width: 960px;
+            height: 540px;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+        }
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="slide active" id="slide1">
+            <div class="container animated fadeIn">
+                <h1>What is Generative AI?</h1>
+                <p>Generative artificial intelligence (AI) refers to algorithms, like ChatGPT, that are capable of producing new content such as audio, code, images, text, simulations, and videos. Recent advancements in this field have the potential to significantly transform our methods of content creation.</p>
+                <p>Activity: Drag-and-drop game to match AI terms with their definitions.</p>
+                <div class="drag-drop-game">
+                    <div class="terms">
+                        <div class="term" draggable="true" id="term1">Neural Network</div>
+                        <div class="term" draggable="true" id="term2">Machine Learning</div>
+                        <div class="term" draggable="true" id="term3">Deep Learning</div>
+                    </div>
+                    <div class="definitions">
+                        <div class="definition" data-term="term1">A system of algorithms that attempts to recognise underlying relationships in a set of data through a process that mimics the way the human brain operates.</div>
+                        <div class="definition" data-term="term2">A method of data analysis that automates analytical model building, allowing computers to learn from and make predictions based on data.</div>
+                        <div class="definition" data-term="term3">A subset of machine learning involving neural networks with many layers, allowing the model to learn from large amounts of data.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="slide2">
+            <div class="container animated fadeIn">
+                <h1>How does Generative AI work?</h1>
+                <p>Click on the different parts of the flowchart to learn more about how Generative AI functions.</p>
+                <div class="flowchart">
+                    <div class="node" data-info="Generative AI uses neural networks to generate new data.">
+                        <div class="front">Neural Networks</div>
+                        <div class="back">Generative AI uses neural networks to generate new data.</div>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="node" data-info="It learns patterns from existing data to create similar outputs.">
+                        <div class="front">Pattern Learning</div>
+                        <div class="back">It learns patterns from existing data to create similar outputs.</div>
+                    </div>
+                    <div class="arrow">→</div>
+                    <div class="node" data-info="Applications include text generation, image creation, and more.">
+                        <div class="front">Applications</div>
+                        <div class="back">Video Generation: Producing videos based on text descriptions or other inputs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="slide3">
+            <div class="container animated fadeIn">
+                <h1>Applications of Generative AI</h1>
+                <p>Generative AI has a wide range of applications across various fields. Here are some examples:</p>
+                <ul class="applications-list">
+                    <li>Text Generation: Creating human-like text for chatbots, content creation, and more.</li>
+                    <li>Image Creation: Generating realistic images for design, marketing, and entertainment.</li>
+                    <li>Music Composition: Composing music using AI algorithms.</li>
+                    <li>Video Generation: Producing videos based on text descriptions or other inputs.</li>
+                </ul>
+                <div class="image-container">
+                    <img src="https://d3lkc3n5th01x7.cloudfront.net/wp-content/uploads/2024/01/11202325/Generative-AI-Use-Cases-and-Applications-Banner.png" alt="Generative AI Use Cases and Applications" class="animated fadeInUp">
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="slide4">
+            <div class="container animated fadeIn">
+                <h1>Ethical considerations in Generative AI</h1>
+                <p>As Generative AI becomes more prevalent, it's important to consider the ethical implications. Here are some key points:</p>
+                <ul class="ethical-list">
+                    <li>Transparency: Clearly label AI-generated content to avoid misleading users.</li>
+                    <li>Bias: Ensure AI models are trained on diverse datasets to minimise bias.</li>
+                    <li>Privacy: Protect user data and ensure it is used responsibly.</li>
+                    <li>Accountability: Establish guidelines for the responsible use of AI technologies.</li>
+                </ul>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8up_bsSVYhk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="slide5">
+            <div class="container animated fadeIn">
+                <h1>Next Steps</h1>
+                <p>See some examples of AI Applications with various AI platforms.</p>
+                <button class="next-button" onclick="goToNextPage()">Next Page</button>
+            </div>
+        </div>
+    </div>
+    <script src="learning.js"></script>
+</body>
+</html>
